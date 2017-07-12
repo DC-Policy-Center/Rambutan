@@ -39,6 +39,7 @@ start_date_year          =   str(start_date_dateObj.year)
 start_date_month         =   str(start_date_dateObj.month)
 start_date_day           =   str(start_date_dateObj.day)
 start_date_full_string   =   '%s/%s/%s'%(start_date_month,start_date_day,start_date_year)
+start_date_full_string_dash_form   =   '%s-%s-%s'%(start_date_month,start_date_day,start_date_year)
 #Building Request
 #Sets advanced search query to search for current council period (22)
 
@@ -74,7 +75,7 @@ response = dcLegislation.post.advancedSearch(**options)
 data_json = response.json()
 
 if(verbose):print('\nCreating JSON file...')
-with open('newLegislation.json','w') as f:
+with open('newLegislation.json','a') as f:
     toWrite = json.dumps(response.json())
     pprint.pprint(toWrite,f)
 f.close()
@@ -85,7 +86,7 @@ if(tic_toc_track):toc_json_write = time.time()
 
 
 if(verbose):print('\nCreating CSV file...')
-with open('tmp.csv','a', newline='',encoding='utf-8') as f:
+with open('tmp.csv','w', newline='',encoding='utf-8') as f:
     csvWriter = csv.writer(f)
     for key, value in data_json[0].items():
         csvHeader.append(key)
@@ -117,9 +118,14 @@ if(tic_toc_track):toc_csv_write = time.time()
 
 if(verbose):print('\nBuilding dataframe...')
 df = pandas.read_csv('tmp.csv',encoding='utf-8')
-df = df.sort_values(by='Id',ascending=False)
+
+try:
+    df = df.sort_values(by='Id',ascending=False)
+except:
+    df = df.sort(columns='Id',ascending=False)
 if(verbose):print('\nWriting dataframe to CSV file...')
-df.to_csv('New Legislation.csv', index=False, columns=dataHeaders)
+final_file_name = 'Legislation from: '+ start_date_full_string_dash_form + '.csv'
+df.to_csv(final_file_name, index=False, columns=dataHeaders)
 
 if(tic_toc_track):toc_pandas_write = time.time()
 
