@@ -22,7 +22,8 @@ council period.
 '''
 #Requests for POST call, json for parsing, pprint for pretty print outputs, pandas for database, csv for csv writing
 
-import requests, json, pprint, pandas, csv, dcLegislationSTATIC,datetime,sys
+import requests, json, pprint, pandas, csv,datetime,sys
+import dcLegislationSTATIC as dcLegislation
 
 #Initial options for user
 verbose = True                                      #Prints out statements to command line about the process being run
