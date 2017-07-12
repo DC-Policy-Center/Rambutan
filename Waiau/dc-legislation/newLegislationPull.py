@@ -124,7 +124,7 @@ try:
 except:
     df = df.sort(columns='Id',ascending=False)
 if(verbose):print('\nWriting dataframe to CSV file...')
-final_file_name = 'Legislation from: '+ start_date_full_string_dash_form + '.csv'
+final_file_name = 'Daily Legislation//Legislation from: '+ start_date_full_string_dash_form + '.csv'
 df.to_csv(final_file_name, index=False, columns=dataHeaders)
 
 if(tic_toc_track):toc_pandas_write = time.time()
