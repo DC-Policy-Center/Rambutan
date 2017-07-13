@@ -1,18 +1,7 @@
 '''
-Dependencies:
-    *Self built methods*
-    - dcLegislation.py
-        - This method has a dependency on requests as well
-    *Libraries*
-    - json
-    - pprint
-    - pandas
-    - csv
-    - os
-API help from DC Council Website:http://lims.dccouncil.us/api/Help
-newLegislationPull.py is utilizes the advanced search feature in the LIMS API
-specifically to request details on all the legislation from the current (22)
-council period.
+This is a single use python script for Rambutan/Waiau.  Please reference
+dc-policy-center/dc-city-council github project to see live newLegislationPull.py script
+
 
 |Signature-------------------------------------------|
 |Written for DC Policy Center by Michael Watson; 2017|
