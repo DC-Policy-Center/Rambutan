@@ -22,9 +22,10 @@ council period.
 '''
 #Requests for POST call, json for parsing, pprint for pretty print outputs, pandas for database, csv for csv writing
 
-import requests, json, pprint, pandas, csv,datetime,sys
+import requests, json, pprint, pandas, csv,datetime,sys, os
 import dcLegislationSTATIC as dcLegislation
-
+os.chdir(sys.path[0])
+sep = os.path.sep
 #Initial options for user
 verbose = True                                      #Prints out statements to command line about the process being run
 tic_toc_track = True                                #Keeps track of the time elapsed for each process
@@ -40,21 +41,34 @@ start_date_month         =   str(start_date_dateObj.month)
 start_date_day           =   str(start_date_dateObj.day)
 start_date_full_string   =   '%s/%s/%s'%(start_date_month,start_date_day,start_date_year)
 start_date_full_string_dash_form   =   '%s-%s-%s'%(start_date_month,start_date_day,start_date_year)
+
+final_file_name = 'Daily Legislation'+sep+'Legislation from-'+ start_date_full_string_dash_form + '.csv'
+
+# Output messages
+
+request_sent_message = '\nRequest sent...'
+creating_json_file_message = '\nCreating JSON file...'
+json_file_done_message = '\nJSON file done...'
+cleaning_up_directory_message = 'Cleaning up directory...'
+creating_csv_file_message = '\nCreating CSV file...'
+csv_file_done_message = '\nCSV file done...'
+building_dataframe_message = '\nBuilding dataframe...'
+writing_dataframe_to_csv_message = '\nWriting dataframe to CSV file...'
+
+
+
+json_empty_error_break = "data_json len == 0"
 #Building Request
-#Sets advanced search query to search for current council period (22)
+with open('new_legislation_log','a') as log_file:
+    log.file.write(start_date_full_string_dash_form)
 
 options = {
-
             'StartDate': start_date_full_string,
-
             #api wrapper call options section
             'verbose':False,
-
             #api call options section
             'offSet':'0',
             'rowLimit':'100',
-
-
 }
 
 
@@ -70,22 +84,33 @@ if(tic_toc_track):toc_initialize = time.time()
 
 
 # Using API helper to send POST request to LIMS
-if(verbose):print('\nRequest sent...')
+if(verbose):print(request_sent_message)
 response = dcLegislation.post.advancedSearch(**options)
 data_json = response.json()
 
-if(verbose):print('\nCreating JSON file...')
+if(verbose):print(creating_json_file_message)
 with open('newLegislation.json','a') as f:
     toWrite = json.dumps(response.json())
     pprint.pprint(toWrite,f)
 f.close()
-if(verbose):print('\nJSON file done...')
+if(verbose):print(json_file_done_message)
 if(tic_toc_track):toc_json_write = time.time()
 
 
 
+if len(data_json) == 0:
+#Cleaning any stry files from the directory after error call
+    print(cleaning_up_directory_message)
+    try:os.remove('newLegislation.json')
+    except: pass
+    try: os.remove('tmp.csv')
+    except:pass
 
-if(verbose):print('\nCreating CSV file...')
+    with open(final_file_name,'a') as final_file: final_file.write('null,err: data_json len == 0')
+    sys.exit(json_empty_error_break)
+
+
+if(verbose):print(creating_csv_file_message)
 with open('tmp.csv','w', newline='',encoding='utf-8') as f:
     csvWriter = csv.writer(f)
     for key, value in data_json[0].items():
@@ -110,29 +135,27 @@ with open('tmp.csv','w', newline='',encoding='utf-8') as f:
         csvWriter.writerow(row)
         #pprint.pprint(data_json[i]['LegislationNumber'],f)
 f.close()
-if(verbose):print('\nCSV file done...')
+if(verbose):print(csv_file_done_message)
 if(tic_toc_track):toc_csv_write = time.time()
 
 
 
 
-if(verbose):print('\nBuilding dataframe...')
+if(verbose):print(building_dataframe_message)
 df = pandas.read_csv('tmp.csv',encoding='utf-8')
 
 try:
     df = df.sort_values(by='Id',ascending=False)
 except:
     df = df.sort(columns='Id',ascending=False)
-if(verbose):print('\nWriting dataframe to CSV file...')
-final_file_name = 'Daily Legislation//Legislation from: '+ start_date_full_string_dash_form + '.csv'
+if(verbose):print(writing_dataframe_to_csv_message)
 df.to_csv(final_file_name, index=False, columns=dataHeaders)
 
 if(tic_toc_track):toc_pandas_write = time.time()
 
 
 
-print('Cleaning up directory...')
-import os                               # Importing os to delete files in directory
+print(cleaning_up_directory_message)
 os.remove('newLegislation.json')
 os.remove('tmp.csv')
 
