@@ -32,6 +32,10 @@ start_date_full_string   =   '%s/%s/%s'%(start_date_month,start_date_day,start_d
 start_date_full_string_dash_form   =   '%s-%s-%s'%(start_date_month,start_date_day,start_date_year)
 
 final_file_name = 'Daily Legislation'+sep+'Legislation from-'+ start_date_full_string_dash_form + '.csv'
+with open('new_legislation_log','a') as log_file:
+    hr = str(time.localtime().tm_hour)
+    min =str(time.localtime().tm_min)
+    log_file.write('Starting run: '+start_date_full_string_dash_form+'--'+hr+':'+min+'\n')
 
 # Output messages
 
@@ -49,7 +53,7 @@ writing_dataframe_to_csv_message = '\nWriting dataframe to CSV file...'
 json_empty_error_break = "data_json len == 0"
 #Building Request
 with open('new_legislation_log','a') as log_file:
-    log.file.write(start_date_full_string_dash_form)
+    log_file.write(start_date_full_string_dash_form)
 
 options = {
             'StartDate': start_date_full_string,
