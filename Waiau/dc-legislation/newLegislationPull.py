@@ -32,6 +32,8 @@ start_date_full_string   =   '%s/%s/%s'%(start_date_month,start_date_day,start_d
 start_date_full_string_dash_form   =   '%s-%s-%s'%(start_date_month,start_date_day,start_date_year)
 
 final_file_name = 'Daily Legislation'+sep+'Legislation from-'+ start_date_full_string_dash_form + '.csv'
+final_file_name_txt = 'Daily Legislation'+sep+'Legislation from-'+ start_date_full_string_dash_form + '.txt'
+
 with open('new_legislation_log','a') as log_file:
     hr = str(time.localtime().tm_hour)
     min =str(time.localtime().tm_min)
@@ -143,7 +145,7 @@ except:
     df = df.sort(columns='Id',ascending=False)
 if(verbose):print(writing_dataframe_to_csv_message)
 df.to_csv(final_file_name, index=False, columns=dataHeaders)
-
+df.to_csv(final_file_name_txt,index=False,columns=dataHeaders)
 if(tic_toc_track):toc_pandas_write = time.time()
 
 
