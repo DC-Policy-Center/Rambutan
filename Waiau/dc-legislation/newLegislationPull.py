@@ -37,7 +37,7 @@ final_file_name_txt = 'Daily Legislation'+sep+'Legislation from-'+ start_date_fu
 with open('new_legislation_log','a') as log_file:
     hr = str(time.localtime().tm_hour)
     min =str(time.localtime().tm_min)
-    log_file.write('Starting run: '+start_date_full_string_dash_form+'--'+hr+':'+min+'\n')
+    log_file.write('Starting run: '+start_date_full_string_dash_form+'--'+hr+':'+min)
 
 # Output messages
 
@@ -49,13 +49,13 @@ creating_csv_file_message = '\nCreating CSV file...'
 csv_file_done_message = '\nCSV file done...'
 building_dataframe_message = '\nBuilding dataframe...'
 writing_dataframe_to_csv_message = '\nWriting dataframe to CSV file...'
-
+writing_dataframe_to_txt_message = '\nWriting dataframe to TXT file...'
 
 
 json_empty_error_break = "data_json len == 0"
 #Building Request
 with open('new_legislation_log','a') as log_file:
-    log_file.write(start_date_full_string_dash_form)
+    log_file.write(start_date_full_string_dash_form + '\n')
 
 options = {
             'StartDate': start_date_full_string,
@@ -101,7 +101,7 @@ if len(data_json) == 0:
     try: os.remove('tmp.csv')
     except:pass
 
-    with open(final_file_name,'a') as final_file: final_file.write('null,err: data_json len == 0')
+    with open(final_file_name_txt,'a') as final_file: final_file.write('null,err: data_json len == 0')
     sys.exit(json_empty_error_break)
 
 
@@ -145,6 +145,7 @@ except:
     df = df.sort(columns='Id',ascending=False)
 if(verbose):print(writing_dataframe_to_csv_message)
 df.to_csv(final_file_name, index=False, columns=dataHeaders)
+if(verbose):print(writing_dataframe_to_txt_message)
 df.to_csv(final_file_name_txt,index=False,columns=dataHeaders)
 if(tic_toc_track):toc_pandas_write = time.time()
 
