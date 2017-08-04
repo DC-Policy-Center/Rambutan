@@ -101,7 +101,8 @@ if len(data_json) == 0:
     try: os.remove('tmp.csv')
     except:pass
 
-    with open(final_file_name_txt,'a') as final_file: final_file.write('null,'+json_empty_error_break)
+    with open(final_file_name_txt,'a') as final_file: final_file.write('null,'+json_empty_error_break+'\n')
+    with open(final_file_name,'a') as final_file: final_file.write('null,'+json_empty_error_break+'\n')
     with open(log_file_name,'a') as log_file: log_file.write('---'+json_empty_error_break+'\n')
     sys.exit(json_empty_error_break)
 
