@@ -31,13 +31,13 @@ start_date_day           =   str(start_date_dateObj.day)
 start_date_full_string   =   '%s/%s/%s'%(start_date_month,start_date_day,start_date_year)
 start_date_full_string_dash_form   =   '%s-%s-%s'%(start_date_month,start_date_day,start_date_year)
 
-final_file_name = 'Daily Legislation'+sep+'Legislation from-'+ start_date_full_string_dash_form + '.csv'
-final_file_name_txt = 'Daily Legislation'+sep+'Legislation from-'+ start_date_full_string_dash_form + '.txt'
-
-with open('new_legislation_log','a') as log_file:
+final_file_name = 'daily-legislation'+sep+'csv-files'+sep+'Legislation from-'+ start_date_full_string_dash_form + '.csv'
+final_file_name_txt = 'daily-legislation'+sep+'txt-files'+sep+'Legislation from-'+ start_date_full_string_dash_form + '.txt'
+log_file_name = 'daily-legislation'+sep+'leg_log.txt'
+with open(log_file_name,'a') as log_file:
     hr = str(time.localtime().tm_hour)
     min =str(time.localtime().tm_min)
-    log_file.write('Starting run: '+start_date_full_string_dash_form+'--'+hr+':'+min)
+    log_file.write('Starting run: '+start_date_full_string_dash_form+'--'+hr+':'+min+'\n')
 
 # Output messages
 
@@ -52,10 +52,10 @@ writing_dataframe_to_csv_message = '\nWriting dataframe to CSV file...'
 writing_dataframe_to_txt_message = '\nWriting dataframe to TXT file...'
 
 
-json_empty_error_break = "data_json len == 0"
+json_empty_error_break = "No legislation pulled {techErr::data_json len == 0}"
 #Building Request
-with open('new_legislation_log','a') as log_file:
-    log_file.write(start_date_full_string_dash_form + '\n')
+with open(log_file_name,'a') as log_file:
+    log_file.write('---Request sent \n')
 
 options = {
             'StartDate': start_date_full_string,
@@ -101,7 +101,8 @@ if len(data_json) == 0:
     try: os.remove('tmp.csv')
     except:pass
 
-    with open(final_file_name_txt,'a') as final_file: final_file.write('null,err: data_json len == 0')
+    with open(final_file_name_txt,'a') as final_file: final_file.write('null,'+json_empty_error_break)
+    with open(log_file_name,'a') as log_file: log_file.write('---'+json_empty_error_break+'\n')
     sys.exit(json_empty_error_break)
 
 
@@ -148,7 +149,7 @@ df.to_csv(final_file_name, index=False, columns=dataHeaders)
 if(verbose):print(writing_dataframe_to_txt_message)
 df.to_csv(final_file_name_txt,index=False,columns=dataHeaders)
 if(tic_toc_track):toc_pandas_write = time.time()
-
+with open(log_file_name,'a') as log_file: log_file.write('---wrote a total of %i pieces of legislation'%len(data_json)+'\n')
 
 
 print(cleaning_up_directory_message)
