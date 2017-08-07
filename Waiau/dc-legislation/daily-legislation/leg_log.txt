@@ -13,3 +13,12 @@ Starting run: 8-3-2017--14:8
 Starting run: 8-3-2017--14:11
 ---Request sent 
 ---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-4-2017--1:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-5-2017--1:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-6-2017--1:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
