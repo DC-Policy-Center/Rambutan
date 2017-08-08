@@ -1,12 +1,26 @@
 <DOCTYPE! html>
 <head>
   <title>DC Policy Center Intranet Dashboard</title>
+  <link rel='stylesheet' href='./style/style.css'>
+  <meta charset="utf-8">
+  <style> /* set the CSS */
+
+  .bar { fill: steelblue; }
+
+  </style>
+  <script src="//d3js.org/d3.v4.min.js"></script>
 </head>
 
 <body>
-  <h1> DC Policy Center Intranet Dashboard </h1>
-  <h2>Links</h2>
-  <a href="../index.html">Splash page</a>
-  <h2> Legislation Pulls </h2>
-  <a href ="../Waiau/dc-legislation/daily-legislation">Daily legislation list</a>
+  <h1 id=title_bar> DC Policy Center Intranet Dashboard </h1>
+  <div id=link_sidebar>
+    <ul>
+      <li><a href="../index.html">Splash page</a></li>
+      <li><a href ="../Waiau/waiau.html">Daily legislation list</a></li>
+    </ul>
+</div>
+
+<iframe frameBorder="0" class="noScrolling" id=committee_chart src='d3Example.html'></iframe>
+
+
 </body>
