@@ -25,3 +25,33 @@ Starting run: 8-6-2017--1:0
 Starting run: 8-7-2017--1:0
 ---Request sent 
 ---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-9-2017--10:8
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-9-2017--10:9
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-9-2017--10:10
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-9-2017--10:10
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-9-2017--10:12
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-9-2017--10:14
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-9-2017--10:15
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-9-2017--10:25
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-9-2017--11:48
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-9-2017--11:51
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}

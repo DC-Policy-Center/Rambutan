@@ -3,10 +3,33 @@ import matplotlib.pyplot as plt
 import numpy as np
 from operator import itemgetter
 import csv
-import sys
+import os, sys, datetime
+os.chdir(sys.path[0])
+sep = os.path.sep
+
+todays_date              =  datetime.date.today()
+days_to_subtract         =   1
+start_date_dateObj       =   todays_date - datetime.timedelta(days=days_to_subtract)
+
+start_date_year          =   str(start_date_dateObj.year)
+start_date_month         =   str(start_date_dateObj.month)
+start_date_day           =   str(start_date_dateObj.day)
+start_date_full_string   =   '%s/%s/%s'%(start_date_month,start_date_day,start_date_year)
+start_date_full_string_dash_form   =   '%s-%s-%s'%(start_date_month,start_date_day,start_date_year)
+
+week_ago_date_dateObj = todays_date - datetime.timedelta(days=7)
+week_ago_start_date_year          =   str(week_ago_start_date_dateObj.year)
+week_ago_start_date_month         =   str(week_ago_start_date_dateObj.month)
+week_ago_start_date_day           =   str(week_ago_start_date_dateObj.day)
+week_ago_start_date_full_string   =   '%s/%s/%s'%(week_ago_start_date_month,week_ago_start_date_day,week_ago_start_date_year)
+week_ago_start_date_full_string_dash_form   =   '%s-%s-%s'%(week_ago_start_date_month,week_ago_start_date_day,week_ago_start_date_year)
+
+
 a = 'test legislation from 7-11-2017'
 b = 'Legislation from-8-3-2017'
-all_data = pandas.read_csv("./daily-legislation/csv-files/%s.csv"%a)
+final_file_name = 'daily-legislation'+sep+'csv-files'+sep+'Legislation from-'+ start_date_full_string_dash_form + '.csv'
+
+all_data = pandas.read_csv(final_file_name)
 all_data.fillna('Not Referred',inplace=True)
 
 list_of_all_committees = []
@@ -29,11 +52,10 @@ if 'null' in all_data.keys():
                                 'Retained by the Council':0,
                                 'Not Referred':0}
     header = 'Committee,value\n'
-    with open('testoutput.csv','w',newline = '\n') as f:
+    with open('.'+sep+'daily-legislation'+sep+'csv-files'+sep+'daily_legislation_committee_count.csv','w',newline = '\n') as f:
         f.write(header)
         for key,value in dictionary_of_unique_committees.items():
             new_key = ''.join(key)
-            print(new_key)
             row = "%s"%(new_key)+",%i"%(value)
             f.write(row+'\n')
     f.close()
@@ -59,11 +81,10 @@ for item in all_data['CommitteeReferral']:
     dictionary_of_unique_committees[item] = new_value
 
 header = 'Committee,value\n'
-with open('testoutput.csv','w',newline = '\n') as f:
+with open('.'+sep+'daily-legislation'+sep+'csv-files'+sep+'daily_legislation_committee_count.csv','w',newline = '\n') as f:
     f.write(header)
     for key,value in dictionary_of_unique_committees.items():
         new_key = ''.join(key)
-        print(new_key)
         row = "%s"%(new_key)+",%i"%(value)
         f.write(row+'\n')
 f.close()

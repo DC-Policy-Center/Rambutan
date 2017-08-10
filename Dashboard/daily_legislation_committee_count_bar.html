@@ -34,7 +34,7 @@ var svg = d3.select("body").append("svg")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // get the data
-d3.csv("testoutput.csv", function(error, data) {
+d3.csv("..\\Waiau\\dc-legislation\\daily-legislation\\csv-files\\daily_legislation_committee_count.csv", function(error, data) {
   if (error) throw error;
 
   // format the data
@@ -71,6 +71,27 @@ d3.csv("testoutput.csv", function(error, data) {
   // add the y Axis
   svg.append("g")
       .call(d3.axisLeft(y));
+
+
+  svg.append("text")
+        .attr("x", (width / 2))
+        .attr("y", 0 - (margin.top/8))
+        .attr("text-anchor", "middle")
+        .style("font-size", "16px")
+        .style("text-decoration", "underline")
+        .text("Count of legislation in committee");
+  svg.append("text")
+        .attr("x", (width / 2))
+        .attr("y", margin.bottom + 100)
+        .attr("text-anchor", "middle")
+        .style("font-size", "16px")
+        .text("Committee");
+  svg.append("text")
+        .attr("y", - 50)
+        .attr("x", margin.left - 200)
+        .attr("text-anchor", "middle")
+        .style("font-size", "16px")
+        .text("Committee");
 
 });
 
