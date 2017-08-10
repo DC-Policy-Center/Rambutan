@@ -16,14 +16,14 @@ start_date_month         =   str(start_date_dateObj.month)
 start_date_day           =   str(start_date_dateObj.day)
 start_date_full_string   =   '%s/%s/%s'%(start_date_month,start_date_day,start_date_year)
 start_date_full_string_dash_form   =   '%s-%s-%s'%(start_date_month,start_date_day,start_date_year)
-
+''' To be added later
 week_ago_date_dateObj = todays_date - datetime.timedelta(days=7)
 week_ago_start_date_year          =   str(week_ago_start_date_dateObj.year)
 week_ago_start_date_month         =   str(week_ago_start_date_dateObj.month)
 week_ago_start_date_day           =   str(week_ago_start_date_dateObj.day)
 week_ago_start_date_full_string   =   '%s/%s/%s'%(week_ago_start_date_month,week_ago_start_date_day,week_ago_start_date_year)
 week_ago_start_date_full_string_dash_form   =   '%s-%s-%s'%(week_ago_start_date_month,week_ago_start_date_day,week_ago_start_date_year)
-
+'''
 
 a = 'test legislation from 7-11-2017'
 b = 'Legislation from-8-3-2017'

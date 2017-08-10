@@ -104,6 +104,10 @@ if len(data_json) == 0:
     with open(final_file_name_txt,'a') as final_file: final_file.write('null,'+json_empty_error_break+'\n')
     with open(final_file_name,'a') as final_file: final_file.write('null,'+json_empty_error_break+'\n')
     with open(log_file_name,'a') as log_file: log_file.write('---'+json_empty_error_break+'\n')
+
+    import processLeg
+    with open(log_file_name,'a') as log_file: log_file.write('---writing committee CSV\n')
+
     sys.exit(json_empty_error_break)
 
 
@@ -151,7 +155,8 @@ if(verbose):print(writing_dataframe_to_txt_message)
 df.to_csv(final_file_name_txt,index=False,columns=dataHeaders)
 if(tic_toc_track):toc_pandas_write = time.time()
 with open(log_file_name,'a') as log_file: log_file.write('---wrote a total of %i pieces of legislation'%len(data_json)+'\n')
-
+import processLeg
+with open(log_file_name,'a') as log_file: log_file.write('---writing committee CSV\n')
 
 print(cleaning_up_directory_message)
 os.remove('newLegislation.json')

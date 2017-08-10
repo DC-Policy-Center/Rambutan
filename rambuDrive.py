@@ -9,11 +9,13 @@ os.system('python ./Waiau/dc-legislation/processLeg.py')
 os.chdir(sys.path[0])
 '''
 
-subprocess.call('python ./Waiau/test.py')
 
-subprocess.call('python ./Waiau/dc-legislation/newLegislationPull.py')
+
 os.chdir(sys.path[0])
-subprocess.call('python ./Waiau/dc-legislation/processLeg.py')
+print(sys.path[0])
+subprocess.call('python3 %s/Waiau/dc-legislation/newLegislationPull.py'%(str(sys.path[0])))
+os.chdir(sys.path[0])
+subprocess.call('python3 ./Waiau/dc-legislation/processLeg.py')
 os.chdir(sys.path[0])
 git_command_add = 'git add --all'
 git_command_commit = "git commit -m 'Automated push from rambuDrive...'"
