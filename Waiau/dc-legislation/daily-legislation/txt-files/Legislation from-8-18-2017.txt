@@ -1,0 +1,2 @@
+Id,CouncilPeriod,ShortTitle,Introducer,LegislationNumber,LawNumber,ActNumber,IntroductionDate,Modified,CommitteeReferral,CommitteeReferralComments,Deemed,DeemedOn,LegislationStatus,Category,Subcategory,DocumentUrl
+38631,22,Correspondence from the CIC - Rivers Correctional Institution Inspection Report,Chairman Phil Mendelson,RC22-0073,,,2017-08-18,2017-08-18,,,,,New,Report,Other,http://lims.dccouncil.us/Download/38631/RC22-0073-Introduction.pdf

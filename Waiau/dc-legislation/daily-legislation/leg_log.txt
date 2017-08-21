@@ -64,3 +64,36 @@ Starting run: 8-9-2017--14:56
 Starting run: 8-9-2017--14:57
 ---Request sent 
 ---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-10-2017--1:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-11-2017--1:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-12-2017--1:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-13-2017--1:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-14-2017--1:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-15-2017--1:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-16-2017--1:1
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-17-2017--13:1
+---Request sent 
+Starting run: 8-18-2017--1:0
+---Request sent 
+---wrote a total of 1 pieces of legislation
+---writing committee CSV
+Starting run: 8-19-2017--1:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-20-2017--1:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
