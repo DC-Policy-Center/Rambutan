@@ -97,3 +97,15 @@ Starting run: 8-19-2017--1:0
 Starting run: 8-20-2017--1:0
 ---Request sent 
 ---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-21-2017--1:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-22-2017--1:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-23-2017--1:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
+Starting run: 8-24-2017--1:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
