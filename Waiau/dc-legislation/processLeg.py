@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from operator import itemgetter
 import csv
-import os, sys, datetime
+import os, sys, datetime, time
 os.chdir(sys.path[0])
 sep = os.path.sep
 
@@ -25,6 +25,13 @@ week_ago_start_date_full_string   =   '%s/%s/%s'%(week_ago_start_date_month,week
 week_ago_start_date_full_string_dash_form   =   '%s-%s-%s'%(week_ago_start_date_month,week_ago_start_date_day,week_ago_start_date_year)
 '''
 
+log_file_name = 'daily-legislation'+sep+'processed_leg_log.txt'
+with open(log_file_name,'a') as log_file:
+    hr = str(time.localtime().tm_hour)
+    min =str(time.localtime().tm_min)
+    log_file.write('Starting run: '+start_date_full_string_dash_form+'--'+hr+':'+min+'\n')
+
+
 a = 'test legislation from 7-11-2017'
 b = 'Legislation from-8-3-2017'
 final_file_name = 'daily-legislation'+sep+'csv-files'+sep+'Legislation from-'+ start_date_full_string_dash_form + '.csv'
@@ -37,6 +44,8 @@ list_of_unique_committees = []
 dictionary_of_unique_committees = {}
 if 'null' in all_data.keys():
     print('breaking, no legislation to process...')
+    with open(log_file_name,'a') as log_file:
+        log_file.write('breaking, no legislation to process...\n')
     dictionary_of_unique_committees={
                                 'Committee on Housing and Neighborhood Revitalization':0,
                                 'Committee on Business and Economic Development':0,
@@ -52,7 +61,7 @@ if 'null' in all_data.keys():
                                 'Retained by the Council':0,
                                 'Not Referred':0}
     header = 'Committee,value\n'
-    with open('.'+sep+'daily-legislation'+sep+'csv-files'+sep+'daily_legislation_committee_count.csv','w',newline = '\n') as f:
+    with open('.'+sep+'daily-legislation'+sep+'csv-files'+sep+'daily_legislation_committee_count_DUMP_ZERO_LEG.csv','w',newline = '\n') as f:
         f.write(header)
         for key,value in dictionary_of_unique_committees.items():
             new_key = ''.join(key)
@@ -81,6 +90,8 @@ for item in all_data['CommitteeReferral']:
     dictionary_of_unique_committees[item] = new_value
 
 header = 'Committee,value\n'
+with open(log_file_name,'a') as log_file:
+    log_file.write('Writting committee count\n')
 with open('.'+sep+'daily-legislation'+sep+'csv-files'+sep+'daily_legislation_committee_count.csv','w',newline = '\n') as f:
     f.write(header)
     for key,value in dictionary_of_unique_committees.items():
