@@ -35,7 +35,7 @@ with open(log_file_name,'a') as log_file:
 a = 'test legislation from 7-11-2017'
 b = 'Legislation from-8-3-2017'
 final_file_name = 'daily-legislation'+sep+'csv-files'+sep+'Legislation from-'+ start_date_full_string_dash_form + '.csv'
-
+print(final_file_name)
 all_data = pandas.read_csv(final_file_name)
 all_data.fillna('Not Referred',inplace=True)
 

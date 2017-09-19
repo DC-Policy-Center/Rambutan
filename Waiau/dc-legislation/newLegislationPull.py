@@ -23,7 +23,7 @@ if(tic_toc_track == True):
     tic = time.time()                               # Setting start time of program to do a time elapsed/ tic toc print statement
 legislation_number_iteration_statement_mod = 30     #Sets how frequently the legislation print statement runs
 todays_date              =  datetime.date.today()
-days_to_subtract         =   5
+days_to_subtract         =   1
 start_date_dateObj       =   todays_date - datetime.timedelta(days=days_to_subtract)
 start_date_year          =   str(start_date_dateObj.year)
 start_date_month         =   str(start_date_dateObj.month)
