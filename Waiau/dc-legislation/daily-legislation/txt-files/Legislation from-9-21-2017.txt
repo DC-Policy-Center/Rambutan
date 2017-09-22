@@ -1,0 +1,3 @@
+Id,CouncilPeriod,ShortTitle,Introducer,LegislationNumber,LawNumber,ActNumber,IntroductionDate,Modified,CommitteeReferral,CommitteeReferralComments,Deemed,DeemedOn,LegislationStatus,Category,Subcategory,DocumentUrl
+38785,22,Proposed contract with Turner Construction Company ,Chairman Mendelson,CA22-0283,,,2017-09-21,2017-09-21,Retained by the Council,,Approved,2017-10-02,New,Contract,Contract,http://lims.dccouncil.us/Download/38785/CA22-0283-Introduction.pdf
+38784,22,"Proposed contract with Fast Enterprises, LLC",Chairman Mendelson,CA22-0282,,,2017-09-21,2017-09-21,Retained by the Council,,Approved,2017-10-02,New,Contract,Contract,http://lims.dccouncil.us/Download/38784/CA22-0282-Introduction.pdf
