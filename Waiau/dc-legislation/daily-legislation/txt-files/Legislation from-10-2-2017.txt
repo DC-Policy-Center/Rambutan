@@ -1,0 +1,2 @@
+Id,CouncilPeriod,ShortTitle,Introducer,LegislationNumber,LawNumber,ActNumber,IntroductionDate,Modified,CommitteeReferral,CommitteeReferralComments,Deemed,DeemedOn,LegislationStatus,Category,Subcategory,DocumentUrl
+38879,22,Department of Consumer and Regulatory Affairs: Inspection of the Illegal Construction Enforcement Program,Chairman Phil Mendelson,IG22-0031,,,2017-10-02,2017-10-02,,,,,New,Report,Inspector General,http://lims.dccouncil.us/Download/38879/IG22-0031-Introduction.pdf
