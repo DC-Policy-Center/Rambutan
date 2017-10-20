@@ -59,3 +59,5 @@ Starting run: 10-18-2017--6:0
 Writting committee count
 Starting run: 10-19-2017--6:0
 Writting committee count
+Starting run: 10-19-2017--11:12
+Writting committee count

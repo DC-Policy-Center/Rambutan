@@ -12,7 +12,8 @@ dc-policy-center/dc-city-council github project to see live newLegislationPull.p
 #Requests for POST call, json for parsing, pprint for pretty print outputs, pandas for database, csv for csv writing
 
 import requests, json, pprint, pandas, csv,datetime,sys, os
-import dcLegislationSTATIC as dcLegislation
+from dclims import dclims as dcLegislation
+#import dcLegislationSTATIC as dcLegislation this should no loger be needed, dclims is live
 os.chdir(sys.path[0])
 sep = os.path.sep
 #Initial options for user
