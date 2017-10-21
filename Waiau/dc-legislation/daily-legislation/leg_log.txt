@@ -127,3 +127,7 @@ Starting run: 10-19-2017--11:12
 ---Request sent 
 ---wrote a total of 6 pieces of legislation
 ---writing committee CSV
+Starting run: 10-20-2017--6:0
+---Request sent 
+---wrote a total of 2 pieces of legislation
+---writing committee CSV
