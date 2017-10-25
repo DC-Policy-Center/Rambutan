@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import ip_pull
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,8 +25,8 @@ SECRET_KEY = '#)%f%9xp(t(@=u$f#b)9yfy21avklmb6%)6e94)yu#nc=6pun9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = ['0.0.0.0','10.0.1.102']
+current = ip_pull.get_hostname_ip()
+ALLOWED_HOSTS = ['0.0.0.0',current]
 
 
 # Application definition
