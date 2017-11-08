@@ -187,3 +187,5 @@ Starting run: 11-5-2017--6:0
 Starting run: 11-6-2017--6:0
 ---Request sent 
 ---No legislation pulled {techErr::data_json len == 0}
+Starting run: 11-7-2017--6:10
+---Request sent 
