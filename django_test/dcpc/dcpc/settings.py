@@ -26,7 +26,7 @@ SECRET_KEY = '#)%f%9xp(t(@=u$f#b)9yfy21avklmb6%)6e94)yu#nc=6pun9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 current = ip_pull.get_hostname_ip()
-ALLOWED_HOSTS = ['0.0.0.0',current]
+ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','localhost',current]
 
 
 # Application definition
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'splash'
 ]
 
 MIDDLEWARE = [
