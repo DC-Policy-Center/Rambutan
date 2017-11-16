@@ -1,0 +1,4 @@
+src- source folder
+
++ The source folder is where all code goes
+

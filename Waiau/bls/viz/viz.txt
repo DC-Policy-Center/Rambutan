@@ -1,0 +1,3 @@
+Viz - visualization files
+
++ Every visualization should have its' own folder structure.  These folders should be self contained HTML/CSS/JS/etc.
