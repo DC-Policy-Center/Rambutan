@@ -1,0 +1,2 @@
+Id,CouncilPeriod,ShortTitle,Introducer,LegislationNumber,LawNumber,ActNumber,IntroductionDate,Modified,CommitteeReferral,CommitteeReferralComments,Deemed,DeemedOn,LegislationStatus,Category,Subcategory,DocumentUrl
+39224,22,"Proposed contract between the District of Columbia Housing Authority (""DCHA"") and The Matthews Group Inc. t/a TMG Construction Corp. (TMG"") ",Chairman Mendelson,CA22-0319,,,2017-11-16,2017-11-16,Retained by the Council,,Approved,2017-11-27,New,Contract,Contract,http://lims.dccouncil.us/Download/39224/CA22-0319-Introduction.pdf
