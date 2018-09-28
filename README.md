@@ -20,3 +20,9 @@ allows the user to edit the cron jobs.
 |Start noVNC on reboot|Every reboot|@reboot|
 |Pull DC legislation|Every night at 6am|0 6|
 |Auto push to git repo| Every morning at 7am| 0 7 |
+
+
+-- Unknown current status, in the process of resetting everything.
+
+
+
