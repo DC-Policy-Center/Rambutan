@@ -61,7 +61,7 @@ with open(log_file_name,'a') as log_file:
 options = {
             'StartDate': start_date_full_string,
             #api wrapper call options section
-            'verbose':False,
+            'verbose':True,
             #api call options section
             'offSet':'0',
             'rowLimit':'100',
