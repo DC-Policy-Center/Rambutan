@@ -1,3 +1,12 @@
 name,filename,endpoint,type
 ITS,its.csv,https://opendata.arcgis.com/datasets/496533836db640bcade61dd9078b0d63_53.csv,CSV
 DC Owned Land,owned-land.csv,https://opendata.arcgis.com/datasets/c8cacaa7f74944d19a9941bc7bdee1a2_61.csv,CSV
+CAMA Commercial,cama-com.csv,https://opendata.arcgis.com/datasets/e53572ef8f124631b965709da8200167_23.csv,CSV
+CAMA Condominium,cama-con.csv,https://opendata.arcgis.com/datasets/d6c70978daa8461992658b69dccb3dbf_24.csv,CSV
+CAMA Residential,cama-res.csv,https://opendata.arcgis.com/datasets/c5fb3fbe4c694a59a6eef7bf5f8bc49a_25.csv,CSV
+Common Ownership Lots,common-lots.geojson,https://opendata.arcgis.com/datasets/1f6708b1f3774306bef2fa81e612a725_40.geojson,GEOJSON
+Address Residential Units,address-residential-units.geojson,https://opendata.arcgis.com/datasets/c3c0ae91dca54c5d9ce56962fa0dd645_68.geojson,GEOJSON
+Condo relate table,condo-relate.csv,https://opendata.arcgis.com/datasets/f46a9917163d4cc8a892c05049983627_52.csv,CSV
+Condo regime,condo-regime.csv,https://opendata.arcgis.com/datasets/7447f50e010c4ea19f5733d986999ff4_72.csv,CSV
+Condo one to many,condo-one-to-many.csv,https://opendata.arcgis.com/datasets/26a7301df1c847ce90193274c0741509_55.csv,CSV
+Condo approval lots,condo-approval-lots.geojson,https://opendata.arcgis.com/datasets/3a9e6d16d7374b5b9740888edc12ac13_44.geojson,GEOJSON
