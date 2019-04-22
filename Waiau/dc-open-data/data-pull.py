@@ -8,9 +8,9 @@ import os
 def read_pull_list():
     data_list = []
     with open('open-data-pull-list.csv', newline='') as csvfile:
-    reader = csv.DictReader(csvfile)
-    for row in reader:
-        data_list.append(row)
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            data_list.append(row)
     return(data_list)
 
 def request_and_download(url,file_name):
@@ -26,7 +26,7 @@ def request_and_download(url,file_name):
     return('Valid response, written')
 
 
-data_to_pull = read_pull_list
+data_to_pull = read_pull_list()
 
 
 save_path = "~/Documents/data"
