@@ -1,0 +1,3 @@
+name,filename,endpoint,type
+ITS,its.csv,https://opendata.arcgis.com/datasets/496533836db640bcade61dd9078b0d63_53.csv,CSV
+DC Owned Land,owned-land.csv,https://opendata.arcgis.com/datasets/c8cacaa7f74944d19a9941bc7bdee1a2_61.csv,CSV
