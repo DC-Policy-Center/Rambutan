@@ -237,3 +237,17 @@ Starting run: 2-13-2019--8:39
 ---Request sent 
 Starting run: 2-13-2019--8:42
 ---Request sent 
+Starting run: 4-30-2019--12:32
+---Request sent 
+Starting run: 4-30-2019--12:36
+---Request sent 
+Starting run: 4-30-2019--12:39
+---Request sent 
+Starting run: 4-30-2019--14:4
+---Request sent 
+Starting run: 4-30-2019--14:11
+---Request sent 
+Starting run: 4-30-2019--14:12
+---Request sent 
+---wrote a total of 3 pieces of legislation
+---writing committee CSV

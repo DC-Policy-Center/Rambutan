@@ -11,7 +11,8 @@ dc-policy-center/dc-city-council github project to see live newLegislationPull.p
 '''
 #Requests for POST call, json for parsing, pprint for pretty print outputs, pandas for database, csv for csv writing
 
-import requests, json, pprint, pandas, csv,datetime,sys, os
+import requests, json, pprint, csv,datetime,sys, os
+import pandas
 from dclims import dclims as dcLegislation
 #import dcLegislationSTATIC as dcLegislation this should no loger be needed, dclims is live
 os.chdir(sys.path[0])
@@ -150,12 +151,16 @@ try:
     df = df.sort_values(by='Id',ascending=False)
 except:
     df = df.sort(columns='Id',ascending=False)
+
+
 if(verbose):print(writing_dataframe_to_csv_message)
 df.to_csv(final_file_name, index=False, columns=dataHeaders)
 if(verbose):print(writing_dataframe_to_txt_message)
 df.to_csv(final_file_name_txt,index=False,columns=dataHeaders)
 if(tic_toc_track):toc_pandas_write = time.time()
 with open(log_file_name,'a') as log_file: log_file.write('---wrote a total of %i pieces of legislation'%len(data_json)+'\n')
+
+
 import processLeg
 with open(log_file_name,'a') as log_file: log_file.write('---writing committee CSV\n')
 

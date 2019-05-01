@@ -2,6 +2,7 @@ import csv
 import requests
 import filecmp
 
+import time
 import os
 
 
@@ -42,8 +43,13 @@ def request_and_download(url,file_name):
 
 data_to_pull = read_pull_list()
 
+date = time.strftime("%m-%d-%y")
+save_path = "../../data/{}".format(date)
 
-save_path = "../../data"
+try:
+    os.mkdir(save_path)
+except:
+    print('Dir Exists')
 
 i = 0
 for i in range(len(data_to_pull)):
