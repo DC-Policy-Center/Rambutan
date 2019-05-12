@@ -291,3 +291,6 @@ Starting run: 5-10-2019--6:0
 ---Request sent 
 ---wrote a total of 1 pieces of legislation
 ---writing committee CSV
+Starting run: 5-11-2019--6:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
