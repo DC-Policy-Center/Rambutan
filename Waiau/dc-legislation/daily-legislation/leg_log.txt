@@ -343,3 +343,6 @@ Starting run: 5-25-2019--6:0
 Starting run: 5-26-2019--6:0
 ---Request sent 
 ---No legislation pulled {techErr::data_json len == 0}
+Starting run: 5-27-2019--6:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
