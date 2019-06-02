@@ -360,3 +360,6 @@ Starting run: 5-30-2019--6:0
 Starting run: 5-31-2019--6:0
 ---Request sent 
 ---No legislation pulled {techErr::data_json len == 0}
+Starting run: 6-1-2019--6:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
