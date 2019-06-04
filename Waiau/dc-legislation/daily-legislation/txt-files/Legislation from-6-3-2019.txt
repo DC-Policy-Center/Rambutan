@@ -1,0 +1,3 @@
+Id,CouncilPeriod,ShortTitle,Introducer,LegislationNumber,LawNumber,ActNumber,IntroductionDate,Modified,CommitteeReferral,CommitteeReferralComments,Deemed,DeemedOn,LegislationStatus,Category,Subcategory,DocumentUrl
+42692,23,"Proposed contract with Transformative Solutions, Inc. ",Chairman Mendelson,CA23-0165,,,2019-06-03,2019-06-03,Retained by the Council,,Approved,2019-06-14,New,Contract,Contract,http://lims.dccouncil.us/Download/42692/CA23-0165-Introduction.pdf
+42691,23,"Proposed contract to exercise Option Year One (1) with Superior Services & Associates, Inc.",Chairman Mendelson,CA23-0164,,,2019-06-03,2019-06-03,Retained by the Council,,Approved,2019-06-14,New,Contract,Contract,http://lims.dccouncil.us/Download/42691/CA23-0164-Introduction.pdf
