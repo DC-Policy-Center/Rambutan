@@ -194,3 +194,5 @@ Starting run: 6-2-2019--6:0
 breaking, no legislation to process...
 Starting run: 6-3-2019--6:0
 Writting committee count
+Starting run: 6-4-2019--6:0
+Writting committee count

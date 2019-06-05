@@ -62,3 +62,11 @@ for i in range(len(data_to_pull)):
     download_file(url,full_file_name)
 
     i+=1
+
+
+with open('dc-data-log.txt','a') as f:
+    line = "{} :: Wrote out {} files\n".format(date,str(i))
+    f.write(line)
+    f.close()
+
+
