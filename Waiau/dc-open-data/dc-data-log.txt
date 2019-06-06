@@ -1,2 +1,3 @@
 06-05-19 -- 08:45:$S -- Starting dataPull.py06-05-19 :: Wrote out 11 files
 06-05-19 :: Wrote out 11 files
+06-06-19 :: Wrote out 11 files
