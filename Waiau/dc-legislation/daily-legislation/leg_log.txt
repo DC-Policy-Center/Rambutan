@@ -401,3 +401,6 @@ Starting run: 6-10-2019--6:0
 Starting run: 6-11-2019--6:0
 ---Request sent 
 ---No legislation pulled {techErr::data_json len == 0}
+Starting run: 6-12-2019--6:0
+---Request sent 
+---No legislation pulled {techErr::data_json len == 0}
