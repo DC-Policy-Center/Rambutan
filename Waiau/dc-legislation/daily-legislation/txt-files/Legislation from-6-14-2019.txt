@@ -1,0 +1,2 @@
+Id,CouncilPeriod,ShortTitle,Introducer,LegislationNumber,LawNumber,ActNumber,IntroductionDate,Modified,CommitteeReferral,CommitteeReferralComments,Deemed,DeemedOn,LegislationStatus,Category,Subcategory,DocumentUrl
+42777,23,Notification of a Proposed Revenue Bond Issuance by the District of Columbia Housing Finance Agency,Chairman Mendelson,HFA23-0006,,,2019-06-14,2019-06-14,Retained by the Council,,Approved,2019-10-03,New,Housing Finance Agency,Housing Finance Agency,http://lims.dccouncil.us/Download/42777/HFA23-0006-Introduction.pdf
