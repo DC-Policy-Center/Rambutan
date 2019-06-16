@@ -218,3 +218,5 @@ Starting run: 6-13-2019--6:0
 Writting committee count
 Starting run: 6-14-2019--6:0
 Writting committee count
+Starting run: 6-15-2019--6:0
+breaking, no legislation to process...
