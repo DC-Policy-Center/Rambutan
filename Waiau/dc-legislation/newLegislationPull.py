@@ -25,13 +25,22 @@ if(tic_toc_track == True):
     tic = time.time()                               # Setting start time of program to do a time elapsed/ tic toc print statement
 legislation_number_iteration_statement_mod = 30     #Sets how frequently the legislation print statement runs
 todays_date              =  datetime.date.today()
-days_to_subtract         =   1
+days_to_subtract         =   10
+
+
 start_date_dateObj       =   todays_date - datetime.timedelta(days=days_to_subtract)
 start_date_year          =   str(start_date_dateObj.year)
 start_date_month         =   str(start_date_dateObj.month)
 start_date_day           =   str(start_date_dateObj.day)
+
+date_dateObj       =   todays_date
+date_year          =   str(date_dateObj.year)
+date_month         =   str(date_dateObj.month)
+date_day           =   str(date_dateObj.day)
+
+
 start_date_full_string   =   '%s/%s/%s'%(start_date_month,start_date_day,start_date_year)
-start_date_full_string_dash_form   =   '%s-%s-%s'%(start_date_month,start_date_day,start_date_year)
+start_date_full_string_dash_form   =   '%s-%s-%s'%(date_month,date_day,date_year)
 
 final_file_name = 'daily-legislation'+sep+'csv-files'+sep+'Legislation from-'+ start_date_full_string_dash_form + '.csv'
 final_file_name_txt = 'daily-legislation'+sep+'txt-files'+sep+'Legislation from-'+ start_date_full_string_dash_form + '.txt'

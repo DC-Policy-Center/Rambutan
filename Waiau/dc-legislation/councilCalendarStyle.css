@@ -1,0 +1,28 @@
+body {
+  font-family : serif;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+}
+
+h1 {
+  text-align : center;
+  background-color : gray !important;
+  font-family : sans-serif;
+}
+
+h2 {
+  font-family : sans-serif;
+}
+
+h3 {
+  font-family : sans-serif;
+}
+
+.base {
+  max-width : 600px;
+
+}
+
+.hearingHeader {
+  background-color:white;
+}
