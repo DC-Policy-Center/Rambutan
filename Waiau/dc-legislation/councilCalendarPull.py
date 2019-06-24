@@ -10,10 +10,17 @@ sep = os.path.sep
 all_hearings = []
 previous_date = ''
 
-
-
 with open('councilCalendar.html','w') as f:
-    f.write('')
+    style_string = '''
+    body {font-family : serif; -webkit-print-color-adjust: exact; color-adjust: exact; }
+    h1 {text-align : center;background-color : gray !important;font-family : sans-serif; }
+    h2 {font-family : sans-serif;margin-left: 15%;}
+    h3 {font-family : sans-serif;margin-left: 15%;}
+    .base {max-width : 800px; margin-left: 17%;}
+    .hearingHeader {background-color:white;}
+'''
+    head = "<head><meta charset='UTF-8'> <link rel=\"stylesheet\" type=\"text/css\" href=\"./councilCalendarStyle.css\"><style>{}</style></head> ".format(style_string)
+    f.write(head)
     f.close()
 
 for page_number in range(3):
@@ -80,13 +87,14 @@ for page_number in range(3):
         article_dict_list.append(hearing_dict)
         all_hearings.append(hearing_dict)
         #print(article_dict_list)
-        head = "<head><link rel=\"stylesheet\" type=\"text/css\" href=\"./councilCalendarStyle.css\"></head> "
-        date_header = "<h1>{}</h1>".format(hearing_dict["date_to_show"])
-        committee_header = "<div class = \"hearingHeader\"> <h2>{}</h2>".format(hearing_dict["committee"])
-        date_subheader = "<h3>{}</h3> </div>".format(hearing_dict["date"])
-        subj_content = "{}".format(hearing_dict["subject"])
 
-        html = "{}{}{}{}{}".format(head,date_header,committee_header,date_subheader,subj_content)
+        date_header = "\n<!--- Hearing --->\n<h1>{}</h1>".format(hearing_dict["date_to_show"])
+        committee_header = "    <div class = \"hearingHeader\"> <h2>{}</h2>".format(hearing_dict["committee"])
+        date_subheader = "    <h3>{}</h3> </div>".format(hearing_dict["date"])
+        subj_content = "        {}".format(hearing_dict["subject"])
+
+        html = "\n{}\n{}\n{}\n{}\n".format(date_header,committee_header,date_subheader,subj_content)
+
         with open('councilCalendar.html','a',encoding="utf-8") as f:
             f.write(html)
             f.close()
