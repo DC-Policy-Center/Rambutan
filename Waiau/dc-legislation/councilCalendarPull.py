@@ -2,8 +2,8 @@ import requests
 from bs4 import BeautifulSoup as bs
 import re, time
 import os, sys
-os.chdir(sys.path[0])
-sep = os.path.sep
+#os.chdir(sys.path[0])
+#sep = os.path.sep
 
 
 
