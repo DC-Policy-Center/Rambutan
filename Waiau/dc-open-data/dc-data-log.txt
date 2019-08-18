@@ -33,7 +33,13 @@
 07-06-19 :: Wrote out 11 files
 07-07-19 :: Wrote out 11 files
 07-08-19 :: Wrote out 11 files
+<<<<<<< HEAD
 08-14-19 :: Wrote out 11 files
 08-15-19 :: Wrote out 11 files
 08-16-19 :: Wrote out 11 files
 08-17-19 :: Wrote out 11 files
+=======
+
+07-22-19 -- 12:32:10 -- Starting dataPull.py
+	07-22-19 :: Wrote out 11 files
+>>>>>>> 6d2fa7975627007d438aa88e3277753bc6b7a011
