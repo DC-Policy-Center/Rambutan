@@ -1,4 +1,0 @@
-Id,CouncilPeriod,ShortTitle,Introducer,LegislationNumber,LawNumber,ActNumber,IntroductionDate,Modified,CommitteeReferral,CommitteeReferralComments,Deemed,DeemedOn,LegislationStatus,Category,Subcategory,DocumentUrl
-42670,23,"Certification of Fiscal Year 2019 Total Local Source, General Fund Revenue Estimate (Net of Dedicated Taxes) in Support of General Obligation Commercial Paper Bond Anticipation Notes, (series 2019)",Chairman Phil Mendelson,AU23-0009,,,2019-05-29,2019-05-29,,,,,New,Report,Auditor,http://lims.dccouncil.us/Download/42670/AU23-0009-Introduction.pdf
-42668,23,"Correspondence from the Mayor - FY18 District of Columbia Office of Human Rights Language Access Program Annual Compliance Review Report
-",Chairman Phil Mendelson,RC23-0073,,,2019-05-29,2019-05-29,,,,,New,Report,Other,http://lims.dccouncil.us/Download/42668/RC23-0073-Introduction.pdf

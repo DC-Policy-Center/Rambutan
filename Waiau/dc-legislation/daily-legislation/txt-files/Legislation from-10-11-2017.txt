@@ -1,2 +1,0 @@
-Id,CouncilPeriod,ShortTitle,Introducer,LegislationNumber,LawNumber,ActNumber,IntroductionDate,Modified,CommitteeReferral,CommitteeReferralComments,Deemed,DeemedOn,LegislationStatus,Category,Subcategory,DocumentUrl
-38971,22,"Correspondence from the Mayor - OSSE Enhanced Special Education Services Act of 2014: Implementation Report to the Council of the District of Columbia October 1, 2017",Chairman Phil Mendelson,RC22-0094,,,2017-10-11,2017-10-11,,,,,New,Report,Other,http://lims.dccouncil.us/Download/38971/RC22-0094-Introduction.pdf

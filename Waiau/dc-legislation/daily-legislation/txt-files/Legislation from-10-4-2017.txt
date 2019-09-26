@@ -1,2 +1,0 @@
-Id,CouncilPeriod,ShortTitle,Introducer,LegislationNumber,LawNumber,ActNumber,IntroductionDate,Modified,CommitteeReferral,CommitteeReferralComments,Deemed,DeemedOn,LegislationStatus,Category,Subcategory,DocumentUrl
-38925,22,Correspondence from the Real Property Tax Appeals Commission - Tax Year 2017 Annual Report,Chairman Phil Mendelson,RC22-0091,,,2017-10-04,2017-10-04,,,,,New,Report,Other,http://lims.dccouncil.us/Download/38925/RC22-0091-Introduction.pdf

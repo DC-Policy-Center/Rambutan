@@ -1,3 +1,0 @@
-Id,CouncilPeriod,ShortTitle,Introducer,LegislationNumber,LawNumber,ActNumber,IntroductionDate,Modified,CommitteeReferral,CommitteeReferralComments,Deemed,DeemedOn,LegislationStatus,Category,Subcategory,DocumentUrl
-42759,23,"Proposed multiyear contract with Intralot, Inc. ",Chairman Mendelson,CA23-0168,,,2019-06-10,2019-06-10,Retained by the Council,,Disapproved,2019-07-25,New,Contract,Contract,http://lims.dccouncil.us/Download/42759/CA23-0168-Introduction.pdf
-42758,23,"Proposed contract with Altec Industries, Inc. ",Chairman Mendelson,CA23-0167,,,2019-06-10,2019-06-10,Retained by the Council,,Approved,2019-06-21,New,Contract,Contract,http://lims.dccouncil.us/Download/42758/CA23-0167-Introduction.pdf

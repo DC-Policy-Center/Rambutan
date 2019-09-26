@@ -1,3 +1,0 @@
-Id,CouncilPeriod,ShortTitle,Introducer,LegislationNumber,LawNumber,ActNumber,IntroductionDate,Modified,CommitteeReferral,CommitteeReferralComments,Deemed,DeemedOn,LegislationStatus,Category,Subcategory,DocumentUrl
-42437,23,Department of Consumer Regulatory Affairs: Civil Infractions Program Lacked Strong Internal Control Environment,Chairman Phil Mendelson,IG23-0024,,,2019-05-01,2019-05-01,,,,,New,Report,Inspector General,http://lims.dccouncil.us/Download/42437/IG23-0024-Introduction.pdf
-42433,23,Budget Oversight Hearing for Destination DC,NONE,HR23-0082,,,2019-05-10,2019-05-01,Committee on Finance and Revenue,,,,New,Oversight Hearing Record,Oversight Hearing Record,

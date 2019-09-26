@@ -1,2 +1,0 @@
-Id,CouncilPeriod,ShortTitle,Introducer,LegislationNumber,LawNumber,ActNumber,IntroductionDate,Modified,CommitteeReferral,CommitteeReferralComments,Deemed,DeemedOn,LegislationStatus,Category,Subcategory,DocumentUrl
-43103,23,"Proposed agreement with the Washington Nationals Stadium, LLC ",Chairman Mendelson,CA23-0255,,,2019-09-03,2019-09-03,Retained by the Council,,Approved,2019-09-14,New,Contract,Contract,http://lims.dccouncil.us/Download/43103/CA23-0255-Introduction.pdf
