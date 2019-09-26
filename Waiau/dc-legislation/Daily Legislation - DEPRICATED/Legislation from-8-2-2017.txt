@@ -1,2 +1,0 @@
-Id,CouncilPeriod,ShortTitle,Introducer,LegislationNumber,LawNumber,ActNumber,IntroductionDate,Modified,CommitteeReferral,CommitteeReferralComments,Deemed,DeemedOn,LegislationStatus,Category,Subcategory,DocumentUrl
-38623,22,2017 Third Quarter Activity Report,Chairman Phil Mendelson,AU22-0016,,,2017-08-02,2017-08-02,,,,,New,Report,Auditor,http://lims.dccouncil.us/Download/38623/AU22-0016-Introduction.pdf
