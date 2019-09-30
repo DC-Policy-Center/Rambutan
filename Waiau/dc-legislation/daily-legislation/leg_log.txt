@@ -715,3 +715,7 @@ Starting run: 9-26-2019--9:28
 Starting run: 9-26-2019--9:28
 ---Request sent 
 ---wrote a total of 132 pieces of legislation
+Starting run: 9-27-2019--6:0
+---Request sent 
+Starting run: 9-30-2019--6:0
+---Request sent 
