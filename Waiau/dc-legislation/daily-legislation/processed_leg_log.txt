@@ -406,3 +406,5 @@ Starting run: 10-19-2019--6:1
 Writting committee count
 Starting run: 10-20-2019--6:1
 Writting committee count
+Starting run: 10-21-2019--6:1
+Writting committee count
