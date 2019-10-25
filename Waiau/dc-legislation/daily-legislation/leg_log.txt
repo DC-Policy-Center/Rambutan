@@ -820,3 +820,7 @@ Starting run: 10-24-2019--6:0
 ---Request sent 
 ---wrote a total of 191 pieces of legislation
 ---writing committee CSV
+Starting run: 10-25-2019--6:0
+---Request sent 
+---wrote a total of 207 pieces of legislation
+---writing committee CSV
