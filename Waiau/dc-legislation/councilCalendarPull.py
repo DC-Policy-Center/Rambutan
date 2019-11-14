@@ -48,7 +48,8 @@ for page_number in range(3):
 
         date = article.time
         #date = re.match(r"<time datetime=\"(.*)\+0000",str(date))
-        date = re.match(r"<time datetime=\"(.*)\-0400",str(date))
+        # change to -400 during daylight savings
+        date = re.match(r"<time datetime=\"(.*)\-0500",str(date))
         try:
             date = date.group(1)
         except:
